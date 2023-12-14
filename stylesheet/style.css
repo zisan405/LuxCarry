@@ -26,22 +26,23 @@ a{
     justify-content: center;
     align-items: center;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
-    box-shadow: 2px 2px 30px rgb(188, 188, 188);
+    box-shadow: 2px 2px 30px rgba(167, 158, 245, 0.2);
     box-sizing: border-box;
     z-index: 1;
-    border: 1px solid rgb(209, 196, 209);
+    border: 1px solid rgba(167, 158, 245, 0.1);
 }
 .searchbox input {
     border: none;
     outline: none;
     height: 20px;
     width: 90px;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     font-size: 1rem;
     padding: 0px 10px;
+    color: #1f1f1f;
 }
 .searchbox input ::placeholder{
-    color: #ede2e2;
+    color: #1d1d1d;
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 0.8rem;
@@ -165,11 +166,140 @@ a{
     margin: 10px 30px;
 }
 .productbox img{
-    height: 250px;
+    max-height: 245px;
+    max-width: 224px;
 }
 .productbox p{
     color: #4d4d4d70;
     font-family: myriad pro;
     font-size: 0.9rem;
     letter-spacing: 0.5;
+}
+.productbox a{
+    color: #2c2c2c;
+    font-family: poppins;
+    font-size: 1rem;
+}
+.buybtn{
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    left: 50%;
+    bottom: -20px;
+    transform: translate(-50%);
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    background: linear-gradient(120deg, #6b60ec 20%, #a166f2);
+    color: #ffffff;
+    display: none;
+    animation: fade 0.2s;
+}
+.productbox:hover .buybtn{
+    display: flex;
+}
+.productbox:hover{
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+.productbox:hover a:last-child{
+    color: #fff;
+    transition: all ease 0.3s;
+
+}
+.about{
+    display: flex;
+    width: 85%;
+    margin: 30px auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.aboutbox{
+    width: 40%;
+    font-family: myriad pro;
+}
+.aboutbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.aboutbox h1{
+    color: #333333;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0px;
+}
+.aboutbox h4{
+    color: #333333;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.aboutbox p{
+    font-size: 1rem;
+    color: #bdbdbd;
+    letter-spacing: 0.5px;
+}
+.notification{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.03);
+}
+.notification h1{
+    font-size: 2rem;
+    color: rgb(56, 56, 56);
+}
+.notificationinput{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 7% 7% 7% 7% / 50% 50% 50% 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+.notificationinput input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.notificationbutton{
+    width: 120px;
+    height: 40px;
+    background-color: #202020;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+.notificationbutton:hover{
+    background-color: #6b60ec;
+    transition: all ease 0.5s;
+}
+footer{
+    background-color: black;
+    padding: 20px;
+}
+footer p{
+    text-align: center;
+    color: #f2f2f2ff;
 }
